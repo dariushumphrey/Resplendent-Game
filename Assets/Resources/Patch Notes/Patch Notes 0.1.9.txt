@@ -28,6 +28,7 @@
 	- Models are switched out with an Exotic weapon model corresponding to weapon type if the weapon is Exotic.
 - <color=cyan>[FIX]</color> Fixed an issue where Exotic Single Fire Rifle "Contempt For Fellows" could not be saved due to a lowercase letter error.
 - <color=cyan>[FIX]</color> Fixed an issue where an active weapon would be disabled when searching the inventory for a favorite weapon (when no weapons are favorited).
+- The Grenade Launcher now fires once per input.
 <size=48>Enemies</size>
 - Enemies can now be staggered, recoiling backwards for 1 second before resuming their behavior (if their attack was blocked by a guard or if damaged by a staggering attack).
 - <color=cyan>[FIX]</color> Fixed an issue where Replevin Ambuscade boss could stutter between waypoint navigation and player detection when tap-firing weapons.
@@ -42,6 +43,10 @@
 - Planet setpiece and Space skybox textures have been updated. Created new skybox for Firing Range level.
 - <color=yellow>[Implement]</color> Added new level: Firing Range
 - Rooms just before boss encounters now have ammo dispensers.
+- Campaign levels 03, 04 now provide respawns during jumping encounters.
+- Viricide 03: 
+	- Every other Tram tunnel floor is colored "dark gray" to better telegraph the moving ground.
+	- Checkpoint relocated to starting room, placing the player just before the boss encounter.
 <size=48>Game</size>
 - <color=yellow>[Implement]</color> Game renamed to: Resplendent
 - <color=yellow>[Implement]</color> Patch Notes are now readable on the Main Menu.
