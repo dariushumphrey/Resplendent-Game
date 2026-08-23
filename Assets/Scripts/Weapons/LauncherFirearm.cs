@@ -14,7 +14,7 @@ public class LauncherFirearm : FirearmScript
     {
         //fireAgain += Time.deltaTime;
 
-        if(firing && currentAmmo >= 1 && fireAgain >= fireRate && !isReloading)
+        if(currentAmmo >= 1 && fireAgain >= fireRate && !isReloading)
         {
             //Firing timer resets, Ammo decrements/ records number of shots
             fireAgain = 0.0f;

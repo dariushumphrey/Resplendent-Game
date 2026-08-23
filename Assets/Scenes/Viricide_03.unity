@@ -2861,6 +2861,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2939604628503852106, guid: d719255c484424a459e3308499541c36, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939604628503852106, guid: d719255c484424a459e3308499541c36, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939604628503852106, guid: d719255c484424a459e3308499541c36, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3311609862331026109, guid: d719255c484424a459e3308499541c36, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -17611,11 +17623,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8680270510821301427, guid: fff8387e94c583a41a4a60297cfe447d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9999807
+      value: 3.9999995
       objectReference: {fileID: 0}
     - target: {fileID: 8680270510821301427, guid: fff8387e94c583a41a4a60297cfe447d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.003818512
+      value: 0.0019147396
       objectReference: {fileID: 0}
     - target: {fileID: 8680270510821301427, guid: fff8387e94c583a41a4a60297cfe447d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20500,7 +20512,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (5)
@@ -22778,7 +22790,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (7)
@@ -26723,7 +26735,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (6)
@@ -31131,7 +31143,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (5)
@@ -39426,7 +39438,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (7)
@@ -40692,6 +40704,7 @@ MonoBehaviour:
   wepName: {fileID: 0}
   flavor: {fileID: 0}
   rarityCheck: {fileID: 0}
+  exoticWeaponTag: {fileID: 0}
   invMonitor: {fileID: 0}
   stats: {fileID: 0}
   dismantleText: {fileID: 0}
@@ -44732,13 +44745,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630391796}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.008, y: 5.96, z: 56.02}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.08, y: 2.02, z: 24.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &1632342294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8811783790108306978, guid: 7e4e23139911045408b717cc5e0bf6c9, type: 3}
@@ -48872,7 +48885,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (5)
@@ -50721,7 +50734,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (7)
@@ -56488,7 +56501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046758301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.231735, y: 4.63, z: 70.49}
+  m_LocalPosition: {x: 0, y: 0, z: 16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57441,7 +57454,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (6)
@@ -58140,7 +58153,7 @@ PrefabInstance:
     - target: {fileID: 4057550156938480199, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86830a873e7092747abada611fbab726, type: 2}
+      objectReference: {fileID: 2100000, guid: 64f0b639eb7b1084ab3a536aaeb2f91e, type: 2}
     - target: {fileID: 4372939527535963620, guid: 1f1cb011d9d30834f97f8cc40a08a706, type: 3}
       propertyPath: m_Name
       value: ph_tram_tunnel_scenic (6)

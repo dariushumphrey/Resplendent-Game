@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6306833894733797269, guid: 91e2dcf359c3fd1429a351214edaffae, type: 3}
       propertyPath: display
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6306833894733797269, guid: 91e2dcf359c3fd1429a351214edaffae, type: 3}
       propertyPath: contactOnly.m_Bits

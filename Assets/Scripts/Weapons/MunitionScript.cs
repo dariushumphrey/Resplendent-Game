@@ -433,12 +433,6 @@ public class MunitionScript : MonoBehaviour
                                 targets[t].gameObject.AddComponent<Rigidbody>();
                                 targets[t].gameObject.GetComponent<Rigidbody>().AddExplosionForce(400f, transform.position, 10f, 500f);
                             }
-
-                            else
-                            {
-                                targets[t].gameObject.AddComponent<Rigidbody>();
-                                targets[t].gameObject.GetComponent<Rigidbody>().AddExplosionForce(400f, transform.position, 10f, 500f);
-                            }
                         }
                     }
                 }
@@ -687,12 +681,6 @@ public class MunitionScript : MonoBehaviour
                         if (targets[t].GetComponent<ReplevinScript>().state != ReplevinScript.Mode.Target)
                         {
                             if (targets[t].GetComponent<Rigidbody>() == null)
-                            {
-                                targets[t].gameObject.AddComponent<Rigidbody>();
-                                targets[t].gameObject.GetComponent<Rigidbody>().AddExplosionForce(400f, transform.position, 10f, 500f);
-                            }
-
-                            else
                             {
                                 targets[t].gameObject.AddComponent<Rigidbody>();
                                 targets[t].gameObject.GetComponent<Rigidbody>().AddExplosionForce(400f, transform.position, 10f, 500f);

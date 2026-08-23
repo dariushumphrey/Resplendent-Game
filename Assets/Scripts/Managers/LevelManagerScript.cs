@@ -49,6 +49,7 @@ public class LevelManagerScript : MonoBehaviour
     private bool paused = false; //Zeroes game time if true
     private GameObject continueButton, restartButton, quitButton, mainMenuButton;
     internal bool gameComplete = false; //Certifies game completion if true
+    internal bool respawn = false; //Enables Player respawn if true
     internal AsyncOperation async;
     internal Text levelLoadText; //Text that displays Async level load progress
     internal bool lvlProgressSaved = false;
@@ -233,10 +234,11 @@ public class LevelManagerScript : MonoBehaviour
                     gameRetryDelay -= Time.deltaTime;
                     if(gameRetryDelay <= 0f)
                     {
-                        if(gameComplete)
+                        if(gameComplete || respawn)
                         {
                             gameRetryDelay = 5f;
                             player.RespawnPlayer();
+                            player.inv.ReconnectInputEvents();
                         }
 
                         else

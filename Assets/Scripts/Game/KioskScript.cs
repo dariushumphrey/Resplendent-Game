@@ -1452,70 +1452,70 @@ public class KioskScript : MonoBehaviour
 
                 if (wepTypeStr == "0")
                 {
-                    wepName.text = "Outstanding Warrant";
+                    wepName.text = "Outstanding Warrant (Full Fire Rifle)";
                     item.GetComponent<FirearmScript>().flavorText = "''The time has come to collect.'' ";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "1")
                 {
-                    wepName.text = "The Dismissal";
+                    wepName.text = "The Dismissal (Machine Gun)";
                     item.GetComponent<FirearmScript>().flavorText = "''Wealth is found in the hoard. The Replevin know this; They are territorial, but are otherwise unbothersome.''";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "2")
                 {
-                    wepName.text = "Apathetic";
+                    wepName.text = "Apathetic (Pistol)";
                     item.GetComponent<FirearmScript>().flavorText = "At what point do the restraints simply fail?'";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "3")
                 {
-                    wepName.text = "Mercies";
+                    wepName.text = "Mercies (Burst Fire Rifle)";
                     item.GetComponent<FirearmScript>().flavorText = "FORAGER operatives are known for on-site procurement tactics. ''Looting'' is a word the robbed often use.";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "4")
                 {
-                    wepName.text = "Viral Shadow";
+                    wepName.text = "Viral Shadow (Shotgun)";
                     item.GetComponent<FirearmScript>().flavorText = "''The Resplendent fell victim to a first-of-its-kind case of ''Interstellar agro-terrorism''. This was no mere plot.''";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "5")
                 {
-                    wepName.text = "Contempt For Fellows";
+                    wepName.text = "Contempt For Fellows (Single Fire Rifle)";
                     item.GetComponent<FirearmScript>().flavorText = "''Force-feeding Replevin Lucent, a resource known to modify behavior on ingestion, defies most known interstellar laws.''";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "6")
                 {
-                    wepName.text = "Underfoot";
+                    wepName.text = "Underfoot (SMG)";
                     item.GetComponent<FirearmScript>().flavorText = "Using this Weapon feels like a perpetual Calvary charge. For where you're going, you won't be needing any breaks.";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "7")
                 {
-                    wepName.text = "Nebulous At Best";
+                    wepName.text = "Nebulous At Best (Grenade Launcher)";
                     item.GetComponent<FirearmScript>().flavorText = "Just when you thought you understood how the world works.";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "8")
                 {
-                    wepName.text = "Deleterious";
+                    wepName.text = "Deleterious (Opening Shot)";
                     item.GetComponent<FirearmScript>().flavorText = "''The Resplendent is too large to be fully lost. What Lucent has already consumed, however, may take years to chisel away.''";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }
 
                 if (wepTypeStr == "9")
                 {
-                    wepName.text = "Bad Grief";
+                    wepName.text = "Bad Grief (AMLR)";
                     item.GetComponent<FirearmScript>().flavorText = "''LOOK at what they have done to MY Resplendent! MINE! [REDACTED] cannot be allowed to survive! NO MORE!''" + "\n" + "-Unknown";
                     flavor.text = item.GetComponent<FirearmScript>().flavorText;
                 }

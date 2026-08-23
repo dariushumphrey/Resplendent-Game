@@ -30,7 +30,7 @@ public class WeaponManagerScript : MonoBehaviour
 
     public List<string> observedWeps = new List<string>(10); //List of Weapons from inventory.txt
     public string filepath = "inventory.txt"; //Inventory file name
-    public Text wepName, flavor, rarityCheck, invMonitor, stats, dismantleText, appraisal, favNotice, wepPlatform; //Texts that display Weapon stats, worth, and dismantle notices
+    public Text wepName, flavor, rarityCheck, exoticWeaponTag, invMonitor, stats, dismantleText, appraisal, favNotice, wepPlatform; //Texts that display Weapon stats, worth, and dismantle notices
     public Text cheatOne, cheatTwo, cheatThree, cheatFour; //Texts that displays Weapon cheats
     public TextMeshProUGUI cheatTraitOne, cheatTraitTwo;
     private TMP_SpriteAsset mnkInput, controllerInput;
@@ -128,6 +128,7 @@ public class WeaponManagerScript : MonoBehaviour
                 wepName.text = "Your Inventory is empty! Acquire weapons in order to inspect them here.";
                 flavor.text = "";
                 rarityCheck.text = "";
+                exoticWeaponTag.text = "";
                 invMonitor.text = "";
                 stats.text = "";
                 dismantleText.text = "";
@@ -154,6 +155,7 @@ public class WeaponManagerScript : MonoBehaviour
                 wepName.text = "Your Inventory is empty! Acquire weapons in order to inspect them here.";
                 flavor.text = "";
                 rarityCheck.text = "";
+                exoticWeaponTag.text = "";
                 invMonitor.text = "";
                 stats.text = "";
                 dismantleText.text = "";
@@ -468,20 +470,22 @@ public class WeaponManagerScript : MonoBehaviour
         {
             rarityCheck.text = "Usual";
 
+            exoticWeaponTag.text = "";
             cheatOne.text = "";
             cheatTwo.text = "";
             cheatThree.text = "";
             cheatFour.text = "";
-            cheatTraitOne.text = " ";
-            cheatTraitTwo.text = " ";
+            cheatTraitOne.text = "";
+            cheatTraitTwo.text = "";
         }
 
         if (rarStr == "2")
         {
             rarityCheck.text = "Sought";
+            exoticWeaponTag.text = "";
 
-            cheatTraitOne.text = " ";
-            cheatTraitTwo.text = " ";
+            cheatTraitOne.text = "";
+            cheatTraitTwo.text = "";
             item.GetComponent<FirearmScript>().weaponRarity = 2;
             item.GetComponent<FirearmScript>().RarityAugment();
         }
@@ -489,7 +493,8 @@ public class WeaponManagerScript : MonoBehaviour
         if (rarStr == "3")
         {
             rarityCheck.text = "Coveted";
-            cheatTraitTwo.text = " ";
+            exoticWeaponTag.text = "";
+            cheatTraitTwo.text = "";
             item.GetComponent<FirearmScript>().weaponRarity = 3;
             item.GetComponent<FirearmScript>().RarityAugment();
         }
@@ -497,6 +502,7 @@ public class WeaponManagerScript : MonoBehaviour
         if (rarStr == "4")
         {
             rarityCheck.text = "Treasured";
+            exoticWeaponTag.text = "";
             item.GetComponent<FirearmScript>().weaponRarity = 4;
             item.GetComponent<FirearmScript>().RarityAugment();
         }
@@ -514,6 +520,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Outstanding Warrant";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "Full Fire Rifle";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -527,6 +534,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "The Dismissal";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "Machine Gun";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -540,6 +548,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Apathetic";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "Pistol";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -553,6 +562,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Mercies";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "Burst Fire Rifle";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -566,6 +576,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Viral Shadow";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "Shotgun";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -579,6 +590,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Contempt For Fellows";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "Single Fire Rifle";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -592,6 +604,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Underfoot";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "SMG";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -605,6 +618,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Nebulous At Best";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "Grenade Launcher";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -618,6 +632,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Deleterious";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "Opening Shot";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -631,6 +646,7 @@ public class WeaponManagerScript : MonoBehaviour
                 {
                     wepName.text = "Bad Grief";
                     rarityCheck.text = "Exotic";
+                    exoticWeaponTag.text = "AMLR";
 
                     item.GetComponent<FirearmScript>().isExotic = true;
                     //item.GetComponent<FirearmScript>().damagePercent = 60f;
@@ -645,6 +661,7 @@ public class WeaponManagerScript : MonoBehaviour
             {
                 item.GetComponent<FirearmScript>().isExotic = false;
                 item.GetComponent<FirearmScript>().RarityAugment();
+                exoticWeaponTag.text = "";
 
                 flavor.text = item.GetComponent<FirearmScript>().flavorText;
             }

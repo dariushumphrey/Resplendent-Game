@@ -61,7 +61,7 @@ public class PlayerInventoryScript : MonoBehaviour
 
     //invMonitor - text that displays inventory position/total inventory size
     //rarityCheck - text that displays Weapon rarity
-    private Text invMonitor, sortingMonitor, favoriteMark, rarityCheck, dismantleText;
+    private Text invMonitor, sortingMonitor, favoriteMark, rarityCheck, exoticWeaponTag, dismantleText;
     private bool automateLeft; //Automatically increments selection value if true
     private bool automateRight;
     private int automateSelection = 0; //Searches for favorite Weapons on behalf of selection (variable)
@@ -119,6 +119,7 @@ public class PlayerInventoryScript : MonoBehaviour
         favoriteMark = GameObject.Find("favoriteWepMark").GetComponent<Text>();
         sortingMonitor = GameObject.Find("sortingMonitor").GetComponent<Text>();
         rarityCheck = GameObject.Find("weaponRarity").GetComponent<Text>();
+        exoticWeaponTag = GameObject.Find("exoticWeaponTag").GetComponent<Text>();
         dismantleText = GameObject.Find("deletingText").GetComponent<Text>();
         reticleSprite = GameObject.Find("reticleImage").GetComponent<Image>();
 
@@ -288,36 +289,94 @@ public class PlayerInventoryScript : MonoBehaviour
             if (inventory[selection].GetComponent<FirearmScript>().weaponRarity == 1)
             {
                 rarityCheck.text = "Usual";
+                exoticWeaponTag.text = "";
                 weaponPage.color = Color.grey;
             }
 
             if (inventory[selection].GetComponent<FirearmScript>().weaponRarity == 2)
             {
                 rarityCheck.text = "Sought";
+                exoticWeaponTag.text = "";
                 weaponPage.color = Color.green;
             }
 
             if (inventory[selection].GetComponent<FirearmScript>().weaponRarity == 3)
             {
                 rarityCheck.text = "Coveted";
+                exoticWeaponTag.text = "";
                 weaponPage.color = Color.red;
             }
 
             if (inventory[selection].GetComponent<FirearmScript>().weaponRarity == 4)
             {
                 rarityCheck.text = "Treasured";
+                exoticWeaponTag.text = "";
                 weaponPage.color = Color.yellow;
             }
 
             if (inventory[selection].GetComponent<FirearmScript>().weaponRarity == 5)
-            {
-                rarityCheck.text = "Fated";
-                weaponPage.color = Color.cyan;
-
+            {                
                 if(inventory[selection].GetComponent<FirearmScript>().isExotic == true)
                 {
+                    if(inventory[selection].name == "Outstanding Warrant")
+                    {
+                        exoticWeaponTag.text = "Full Fire Rifle";
+                    }
+
+                    else if (inventory[selection].name == "The Dismissal")
+                    {
+                        exoticWeaponTag.text = "Machine Gun";
+                    }
+
+                    else if (inventory[selection].name == "Apathetic")
+                    {
+                        exoticWeaponTag.text = "Pistol";
+                    }
+
+                    else if (inventory[selection].name == "Mercies")
+                    {
+                        exoticWeaponTag.text = "Burst Fire Rifle";
+                    }
+
+                    else if (inventory[selection].name == "Viral Shadow")
+                    {
+                        exoticWeaponTag.text = "Shotgun";
+                    }
+
+                    else if (inventory[selection].name == "Contempt For Fellows")
+                    {
+                        exoticWeaponTag.text = "Single Fire Rifle";
+                    }
+
+                    else if (inventory[selection].name == "Underfoot")
+                    {
+                        exoticWeaponTag.text = "SMG";
+                    }
+
+                    else if (inventory[selection].name == "Nebulous At Best")
+                    {
+                        exoticWeaponTag.text = "Grenade Launcher";
+                    }
+
+                    else if (inventory[selection].name == "Deleterious")
+                    {
+                        exoticWeaponTag.text = "Opening Shot";
+                    }
+
+                    else
+                    {
+                        exoticWeaponTag.text = "AMLR";
+                    }
+
                     rarityCheck.text = "Exotic";
                     weaponPage.color = Color.Lerp(Color.cyan, Color.white, Mathf.PingPong(Time.time, 0.9f));
+                }
+
+                else
+                {
+                    rarityCheck.text = "Fated";
+                    exoticWeaponTag.text = "";
+                    weaponPage.color = Color.cyan;
                 }
             }
 
@@ -2346,6 +2405,31 @@ public class PlayerInventoryScript : MonoBehaviour
             input.actions.Disable();
             input = null;
         }
+    }
+
+    public void ReconnectInputEvents()
+    {
+        if(!input)
+        {
+            input = gameObject.GetComponent<PlayerInput>();        
+        }
+
+        weaponDismantle = input.actions["Dismantle (Inventory)"];
+        throwGrenade = input.actions["Charge, Throw Grenade"];
+
+        if (weaponDismantle != null)
+        {
+            weaponDismantle.performed += OnDismantleStart;
+            weaponDismantle.canceled += CancelDismantle;
+        }
+
+        if (throwGrenade != null)
+        {
+            throwGrenade.performed += OnGrenadeThrowStart;
+            throwGrenade.canceled += ReleaseGrenade;
+        }
+
+        input.actions.Enable();
     }
 
     public void OnDismantleStart(InputAction.CallbackContext ctx)
