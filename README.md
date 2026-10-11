@@ -5,6 +5,7 @@
 
 Current Version: MVP 0.1.9 (8/11/2026)
 
+[Resplendent: 4-page Game Design Document](https://docs.google.com/document/d/1yJ_1-MkNhYzL3BjRoOfRVwp09s76sqHuq07FuJK_UM8/edit?usp=sharing)
 # Contents:
 
 ## Details
